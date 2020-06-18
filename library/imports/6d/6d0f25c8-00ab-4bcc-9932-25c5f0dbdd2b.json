@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "red_point",
+    "texture": "722bddca-9816-4fcf-b274-3794ce08eebf",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      41,
+      43
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      41,
+      43
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

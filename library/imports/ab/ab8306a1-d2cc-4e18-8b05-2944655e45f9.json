@@ -1,0 +1,116 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "poker.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "solitaire_0_1": {
+      "__uuid__": "d22cc72f-4c73-4240-ac4b-909c8d06c3e4"
+    },
+    "solitaire_0_10": {
+      "__uuid__": "559b096a-9751-49f0-88c1-385b19e40060"
+    },
+    "solitaire_0_11": {
+      "__uuid__": "a472d8b3-5d87-46f4-bb6f-bcc774cac675"
+    },
+    "solitaire_0_12": {
+      "__uuid__": "2796ed03-2f40-4c72-8ba1-263c6fefd9e7"
+    },
+    "solitaire_0_13": {
+      "__uuid__": "83b8378c-8f6d-4a22-bdf3-44253926e5d5"
+    },
+    "solitaire_0_2": {
+      "__uuid__": "8251784b-7f2c-47f2-96ca-13020347e5eb"
+    },
+    "solitaire_0_3": {
+      "__uuid__": "cde5d6cc-89e3-4d02-a62c-62bc0d67fc30"
+    },
+    "solitaire_0_4": {
+      "__uuid__": "e090dc46-4a04-4b75-817a-a9dc8585f867"
+    },
+    "solitaire_0_5": {
+      "__uuid__": "802cb5af-34b1-4b90-9f11-a0206866d786"
+    },
+    "solitaire_0_6": {
+      "__uuid__": "677d5754-2c71-4b53-80ff-183f90669977"
+    },
+    "solitaire_0_7": {
+      "__uuid__": "ea4dc4fd-b82a-4f0c-8f04-7ad771b62f72"
+    },
+    "solitaire_0_8": {
+      "__uuid__": "81833e90-2e9a-4b79-a301-ec4062a034b3"
+    },
+    "solitaire_0_9": {
+      "__uuid__": "72689a0c-3fa2-43bc-8fab-78ce4c479bfb"
+    },
+    "solitaire_1_1": {
+      "__uuid__": "fb211404-a8d8-464c-9430-083f7fd4825d"
+    },
+    "solitaire_1_10": {
+      "__uuid__": "e0de74a6-1f55-4d4d-b8cb-9f6a9cb54b22"
+    },
+    "solitaire_1_11": {
+      "__uuid__": "2fb6d5cf-b21e-42e5-9c0a-cdc06ccd49b6"
+    },
+    "solitaire_1_12": {
+      "__uuid__": "6e630ba1-13cf-4958-ab18-c263bca9e9b8"
+    },
+    "solitaire_1_13": {
+      "__uuid__": "75d5111b-c6c0-402a-8edb-d6efd51af249"
+    },
+    "solitaire_1_2": {
+      "__uuid__": "bf1f8863-6f41-4be4-b661-0f92f582fcf9"
+    },
+    "solitaire_1_3": {
+      "__uuid__": "6d64e275-04bc-40d9-9661-6e36089a1cf0"
+    },
+    "solitaire_1_4": {
+      "__uuid__": "6b02e24f-d4a7-461e-b079-807cec428a63"
+    },
+    "solitaire_1_5": {
+      "__uuid__": "e16d8d49-57dd-4eaf-a0ae-258e0bbcb3c2"
+    },
+    "solitaire_1_6": {
+      "__uuid__": "4362a3b7-e6bd-4b7e-bf83-b9b59c62081c"
+    },
+    "solitaire_1_7": {
+      "__uuid__": "f912ef3a-be2b-412c-8b1d-d10b91f22b4d"
+    },
+    "solitaire_1_8": {
+      "__uuid__": "dccce44a-f9df-44f7-81ef-889a79cb1822"
+    },
+    "solitaire_1_9": {
+      "__uuid__": "1d34ebb3-d47f-4cb8-96e1-3cc4f910b2d2"
+    },
+    "solitaire_back": {
+      "__uuid__": "ba7a29a8-a134-43d6-aebe-b7052e2d44ac"
+    },
+    "solitaire_big_0": {
+      "__uuid__": "30d99499-0bd8-4b77-aab7-2902621200b5"
+    },
+    "solitaire_big_1": {
+      "__uuid__": "50392fe1-a6f2-4791-be64-5b6d1cb509b5"
+    },
+    "solitaire_big_2": {
+      "__uuid__": "b691acee-78a6-4ccd-90bb-11cb8091490f"
+    },
+    "solitaire_big_3": {
+      "__uuid__": "5a8d1c53-0539-418e-bf19-f35f51c2e4c3"
+    },
+    "solitaire_front": {
+      "__uuid__": "1c94c43b-905b-4a32-8782-5de25df53d28"
+    },
+    "solitaire_small_0": {
+      "__uuid__": "0d70831b-ff7a-4755-9262-20d32f46a4fd"
+    },
+    "solitaire_small_1": {
+      "__uuid__": "5671fb47-40df-45f6-a04e-e54844f60473"
+    },
+    "solitaire_small_2": {
+      "__uuid__": "b8a4ee17-1685-4d3e-8c5a-9788a9deefcf"
+    },
+    "solitaire_small_3": {
+      "__uuid__": "025dc830-c20a-4f30-952a-250984e9972e"
+    }
+  }
+}

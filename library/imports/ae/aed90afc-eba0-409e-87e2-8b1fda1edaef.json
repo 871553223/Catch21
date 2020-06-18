@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "return_btn",
+    "texture": "749c8a1d-123e-466d-a069-fdc7a8cdf0e7",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      109,
+      111
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      109,
+      111
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "currpai_kuang",
+    "texture": "80ad1b08-8b50-40e2-b0b1-9a48fe63b69b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      138,
+      187
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      138,
+      187
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

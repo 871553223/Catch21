@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "solitaire_1_8",
+    "texture": "9b23164d-5ec3-4443-b813-03c048ab8767",
+    "atlas": "9d827c33-8f45-44a9-b895-2bdeffc16eb9",
+    "rect": [
+      108,
+      88,
+      50,
+      40
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      50,
+      40
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

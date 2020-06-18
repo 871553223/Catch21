@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "changkuang",
+    "texture": "72d2d08b-1f91-4e6f-b154-7d4f61b282c4",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      141,
+      528
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      141,
+      531
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

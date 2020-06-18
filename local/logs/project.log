@@ -1,0 +1,75 @@
+2020-06-18T18:11:19.994Z - normal: Load ~/.CocosCreator/settings.json
+2020-06-18T18:11:20.021Z - normal: Initializing Asset Database
+2020-06-18T18:11:20.023Z - normal: checking language setting...
+2020-06-18T18:11:20.023Z - normal: Language: zh
+2020-06-18T18:11:20.816Z - success: preview server running at http://localhost:7456
+2020-06-18T18:11:20.827Z - success: protocol editor-framework registered
+2020-06-18T18:11:20.827Z - success: protocol app registered
+2020-06-18T18:11:20.827Z - success: protocol theme registered
+2020-06-18T18:11:20.827Z - success: protocol packages registered
+2020-06-18T18:11:20.827Z - success: protocol uuid registerred
+2020-06-18T18:11:20.827Z - success: protocol db registerred
+2020-06-18T18:11:20.827Z - success: protocol thumbnail registerred
+2020-06-18T18:11:20.827Z - success: protocol unpack registerred
+2020-06-18T18:11:20.827Z - success: protocol disable-commonjs registerred
+2020-06-18T18:11:20.906Z - normal: connected!
+2020-06-18T18:11:20.907Z - normal: Check project /Users/caojinghe/Catch21
+2020-06-18T18:11:20.908Z - normal: Initializing project /Users/caojinghe/Catch21
+2020-06-18T18:11:20.922Z - success: adapters loaded
+2020-06-18T18:11:20.927Z - success: asset-db-debugger loaded
+2020-06-18T18:11:20.972Z - success: fb-audience-network loaded
+2020-06-18T18:11:21.001Z - success: fb-live-stream loaded
+2020-06-18T18:11:21.004Z - success: google-play-instant loaded
+2020-06-18T18:11:21.005Z - success: huawei-adapter loaded
+2020-06-18T18:11:21.005Z - success: jkw-adapter loaded
+2020-06-18T18:11:21.007Z - success: jsb-adapter loaded
+2020-06-18T18:11:21.008Z - success: oppo-adapter loaded
+2020-06-18T18:11:21.013Z - success: package-manager loaded
+2020-06-18T18:11:21.014Z - success: qtt-adapter loaded
+2020-06-18T18:11:21.017Z - success: runtime-dev-tools loaded
+2020-06-18T18:11:21.023Z - success: sdkbox loaded
+2020-06-18T18:11:21.026Z - success: ui-kit-preview-extra loaded
+2020-06-18T18:11:21.029Z - success: ui-kit-preview loaded
+2020-06-18T18:11:21.030Z - success: vivo-adapter loaded
+2020-06-18T18:11:21.083Z - success: alipay-minigame loaded
+2020-06-18T18:11:21.133Z - success: assets loaded
+2020-06-18T18:11:21.135Z - success: baidugame-opendata loaded
+2020-06-18T18:11:21.135Z - success: baidugame loaded
+2020-06-18T18:11:21.139Z - success: builder loaded
+2020-06-18T18:11:21.251Z - success: cocos-services loaded
+2020-06-18T18:11:21.254Z - success: console loaded
+2020-06-18T18:11:21.255Z - success: curve-editor loaded
+2020-06-18T18:11:21.263Z - success: fb-instant-games loaded
+2020-06-18T18:11:21.265Z - success: game-window loaded
+2020-06-18T18:11:21.266Z - success: google-instant-games loaded
+2020-06-18T18:11:21.269Z - success: hierarchy loaded
+2020-06-18T18:11:21.272Z - success: huawei-runtime loaded
+2020-06-18T18:11:21.274Z - success: inspector loaded
+2020-06-18T18:11:21.328Z - success: cpk-publish loaded
+2020-06-18T18:11:21.331Z - success: keystore loaded
+2020-06-18T18:11:21.341Z - success: node-library loaded
+2020-06-18T18:11:21.341Z - success: open-recent-items loaded
+2020-06-18T18:11:21.343Z - success: oppo-runtime loaded
+2020-06-18T18:11:21.343Z - success: package-asset loaded
+2020-06-18T18:11:21.344Z - success: preferences loaded
+2020-06-18T18:11:21.346Z - success: project-importer loaded
+2020-06-18T18:11:21.348Z - success: project-settings loaded
+2020-06-18T18:11:21.357Z - success: qtt-runtime loaded
+2020-06-18T18:11:21.359Z - success: scene loaded
+2020-06-18T18:11:21.360Z - success: simulator-debugger loaded
+2020-06-18T18:11:21.361Z - success: sprite-editor loaded
+2020-06-18T18:11:21.385Z - success: store loaded
+2020-06-18T18:11:21.388Z - success: timeline loaded
+2020-06-18T18:11:21.391Z - success: vivo-runtime loaded
+2020-06-18T18:11:21.392Z - success: wechatgame-opendata loaded
+2020-06-18T18:11:21.395Z - success: wechatgame loaded
+2020-06-18T18:11:21.397Z - success: xiaomi-runtime loaded
+2020-06-18T18:11:21.574Z - success: im-plugin loaded
+2020-06-18T18:11:22.679Z - normal: Initializing Cocos2d
+2020-06-18T18:11:22.969Z - normal: Initializing engine extends
+2020-06-18T18:11:23.428Z - info: Cocos Service load base data!
+2020-06-18T18:11:23.871Z - normal: Loading packages
+2020-06-18T18:11:23.873Z - normal: Watching packages
+2020-06-18T18:11:23.936Z - normal: Run Application
+2020-06-18T18:11:27.654Z - normal: No need to specify the "type" of "PokerPrefabScript.PreviousPosition" because cc.Vec2 is a child class of ValueType.
+2020-06-18T18:11:27.654Z - normal: No need to specify the "type" of "PokerPrefabScript.CurrentPosition" because cc.Vec2 is a child class of ValueType.

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "return_hide_btn",
+    "texture": "55f8faf2-561b-4b77-ac73-845f651fc409",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      109,
+      111
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      109,
+      111
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
