@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "busted_sp",
+    "texture": "cb364bd3-9eaa-49df-a379-70e4f1e291c5",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      50,
+      368
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      50,
+      368
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

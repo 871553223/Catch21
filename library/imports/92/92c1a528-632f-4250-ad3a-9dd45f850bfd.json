@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "staypai_kuang",
+    "texture": "36efbba1-7e69-4fd8-9291-5d5d60b581ed",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      184,
+      219
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      184,
+      219
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

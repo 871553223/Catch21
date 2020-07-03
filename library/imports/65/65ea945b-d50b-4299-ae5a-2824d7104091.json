@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "nobust_tip",
+    "texture": "8f5ab318-7877-4b59-a83b-0a50d922ed28",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      262,
+      102
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      264,
+      102
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

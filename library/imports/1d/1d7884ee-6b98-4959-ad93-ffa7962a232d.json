@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "out_of_move",
+    "texture": "234ffca4-64a4-4a42-9648-b53bbdc7d5fe",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      521,
+      183
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      521,
+      183
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pai_group_guide",
+    "texture": "23e24481-76bf-4eb7-a92b-ce031acd2dac",
+    "atlas": "",
+    "rect": [
+      0,
+      1,
+      103,
+      133
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      103,
+      135
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

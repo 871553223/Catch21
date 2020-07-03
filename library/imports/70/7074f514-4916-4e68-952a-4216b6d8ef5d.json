@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "time_up_text",
+    "texture": "132d139c-8e4a-4739-84e9-238fd6f5c158",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      326,
+      65
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      326,
+      65
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

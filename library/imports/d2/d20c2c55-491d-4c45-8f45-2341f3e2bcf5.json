@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mega_tip",
+    "texture": "fbbd8c60-4a7d-4381-9380-dac88ca6c0f1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      231,
+      127
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      231,
+      127
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

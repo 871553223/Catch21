@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "back_paused_game",
+    "texture": "4d28648e-9c77-4262-9467-f012b208445f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      444,
+      50
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      444,
+      50
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

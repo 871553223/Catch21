@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tutorial",
+    "texture": "ddaf2879-4655-47ac-bc14-7d4fa84e9478",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      334,
+      112
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      334,
+      112
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

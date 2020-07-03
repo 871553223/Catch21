@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/Script/GameSceneScript":1,"./assets/Script/PokerPrefabScript":2,"./assets/Script/LoadViewScript":3,"./assets/Script/ToolsScript":4,"./assets/Script/ContainerPrefabScript":5},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/Script/GameSceneScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/PokerPrefabScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/LoadViewScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/ToolsScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/ContainerPrefabScript.js"}];
+var scripts = [{"deps":{"./assets/Script/LoadViewScript":4,"./assets/Script/GameSceneScript":1,"./assets/Script/TabbarScript":3,"./assets/Script/ToolsScript":5,"./assets/Script/PokerPrefabScript":2,"./assets/Script/ContainerPrefabScript":6},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/Script/GameSceneScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/PokerPrefabScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/TabbarScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/LoadViewScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/ToolsScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/ContainerPrefabScript.js"},{"deps":{},"path":"preview-scripts/assets/Script/NewScript.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 var bundleScript = 'preview-scripts/__qc_bundle__.js';
 

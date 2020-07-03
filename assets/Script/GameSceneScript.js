@@ -12,7 +12,12 @@ cc.Class({
 
         leftSeconds: {
             type:cc.integer,
-            default:90
+            default:240
+        },
+
+        ArrowTips: {
+            type:cc.integer,
+            default:3
         },
 
         backgroundSong: {
@@ -72,13 +77,45 @@ cc.Class({
         CurrentPoker: {
             type:cc.Sprite,
             default:null
+        },
+
+        TimerPause: {
+            type:cc.Boolean,
+            default:false
+        },
+
+        LastNode: {
+            type:cc.Node,
+            default:null
+        },
+
+        PokerErrorTips: {
+            type:cc.SpriteFrame,
+            default:null
+        },
+        PokerTargetTips: {
+            type:cc.SpriteFrame,
+            default:null
+        },
+        PokerAtlas: {
+            type:cc.SpriteAtlas,
+            default:null
+        },
+        ComboCount: {
+            type:cc.integer,
+            default:0
         }
+
+
 
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
+
+        var Tools = cc.find('Canvas').getComponent('ToolsScript');
+
         cc.audioEngine.playMusic(this.backgroundSong,true)
         let size = cc.view.getFrameSize();
         cc.log(size.width,size.height)
@@ -105,7 +142,8 @@ cc.Class({
         this.TimeCountLabel.node.setPosition(0-107,halfHeight - 90 - 50)
         var labelNode = this.TimeCountLabel.node.getChildByName("Background").getChildByName("Label");
         var label = labelNode.getComponent(cc.Label);
-        label.string = this.leftSeconds;
+        var timeString = Tools.FormatMMSS(this.leftSeconds);
+        label.string = timeString;
 
         this.RoundLabel.node.setAnchorPoint(0.5,0);
         this.RoundLabel.node.setPosition(0,halfHeight - 90 - 50)
@@ -132,10 +170,13 @@ cc.Class({
         this.PokerStashView.node.setAnchorPoint(1,1);
         this.PokerStashView.node.setPosition(halfWidth - 10,-halfHeight + 190 + 160);
 
+        
 
+        this.ArrowTips = 3;
         for (var i = 0; i < 4; i++) {
             let pre = cc.instantiate(this.PokerContainer);
-            pre._name="CJH"
+            pre._name="PokerContainer"+(i + 1);
+            pre.getChildByName("UpTip").active = false;
             this.node.addChild(pre);
             pre.setAnchorPoint(0.5,0.5);
             pre.setPosition(-halfWidth + 78 + 60 + 157*i,0);
@@ -144,6 +185,7 @@ cc.Class({
         for (let i = 0; i < 52; i++) {
             let pre = cc.instantiate(this.myPoker);
             pre.PokerNumber = array[i];
+            // pre.PokerNumber = 52;
             // cc.log("PokerInit"+pre.PokerNumber);
             // cc.log("dianshu"+pre.PokerNumber);
             pre._name="Poker_"+i;
@@ -169,19 +211,52 @@ cc.Class({
         bg.getChildByName("FirstRound").active = false;
         bg.getChildByName("SecondRound").active = false;
         bg.getChildByName("ThirdRound").active = false;
+
+        var alertNode = cc.find('Canvas/AlertView');
+        alertNode.active = false;
+
+
         this.fapai(0);
         
         
         var _this = this;
         cc.director.getScheduler().schedule(function(){
+            if (_this.TimerPause === true) {
+                
+            } else {
+                _this.leftSeconds --;
+                _this.ArrowTips ++;
+            }
+            if (_this.ArrowTips === 2) {
+                for (let i = 1; i <= 4; i++) {
+                    var container = _this.node.getChildByName('PokerContainer'+i);
+                    var pokerNode = _this.CurrentPoker.node;
+                    poker = pokerNode.children[pokerNode.childrenCount - 1];
+                    if(poker != null) {
+                        // container.ScoreLabel.string
+                        container.getComponent("ContainerPrefabScript").DetectArrows(poker.PokerRealNumber);
+                    } else {
+                        container.getComponent("ContainerPrefabScript").DetectArrows(0);
+                    }
+                    cc.log(container);
+                }
+            }
             var labelNode = this.TimeCountLabel.node.getChildByName("Background").getChildByName("Label");
             var label = labelNode.getComponent(cc.Label);
+            if (_this.leftSeconds == 30) {
+                cc.loader.loadRes("music/time_tip", cc.AudioClip, function(err, clip) {
+                    cc.audioEngine.play(clip, false, 0.5);
+                });
+                cc.loader.loadRes("font/red_time_font", cc.Font, function(err, font) {
+                    label.font = font;
+                });
+            }
             var timeString = Tools.FormatMMSS(_this.leftSeconds);
             cc.log(timeString);
             label.string = timeString;
-            _this.leftSeconds --;
-            // cc.log(_this.leftSeconds)
-        },this,1,100,1,false);
+            label.color = new cc.Color(255, 0, 0, 255);
+            // cc.log(_this.TimerPause)
+        },_this,1,100,1,false);
     },
 // 发牌函数
     fapai:function(seq) {
@@ -193,9 +268,12 @@ cc.Class({
         if (currentPoker === null) {
             cc.log("Test",lastPocker,currentPoker);
             _this.fanzhuan(lastPocker);
+            _this.ArrowTips = 0;
             return;
         }
-        
+        cc.loader.loadRes("music/init_pai", cc.AudioClip, function(err, clip) {
+            cc.audioEngine.play(clip, false, 0.3);
+        });
         // 回调
         var end_func = cc.callFunc(function(target) {
             var base_count = parseInt(target._name.split("_")[1]) + 1;
@@ -221,38 +299,81 @@ cc.Class({
     fanzhuan:function(pokernode) {
         let size = cc.view.getVisibleSize();
         var _this = this;
-        // 先反转90变正面数据，再反转-90回来，结束，整个过程移动牌面到指定位置
-        var d1 = cc.delayTime(0.01);
-        // var mto = cc.moveTo(0.3, cc.v2(0 + 69,(-size.height / 2) + 95 + 160));
 
-        var pos1 = pokernode.convertToWorldSpaceAR(cc.v2(0,0));
-        var pos2 = _this.CurrentPoker.node.convertToWorldSpaceAR(cc.v2(0,0));
-        var mto = cc.moveBy(0.15, cc.v2(pos2.x - pos1.x + 66,pos2.y - pos1.y));
-        var fan1 = cc.scaleTo(0.15, 0.2, 1);
-        var changeFront = cc.callFunc(function(target) {
-            target.getChildByName("FrontView").active = true;
-            target.getChildByName("Background").active = false;
-        });
+        // 如果当前节点的parent为PokerInstanceBackground，则说明需要往中间移动，如果是在中间则需要往左边移动
+        // _this.PokerInstanceBackground.node
+        if (pokernode.parent === _this.CurrentPoker.node) {
+            var d1 = cc.delayTime(0.01);
+            var pos1 = pokernode.CurrentPosition;
+            var pos2 = pokernode.PreviousPosition;
+            var mto = cc.moveBy(0.15, cc.v2(pos2.x - pos1.x,pos2.y - pos1.y));
+            var fan1 = cc.scaleTo(0.15, 0.2, 1);
+            var changeFront = cc.callFunc(function(target) {
+                target.getChildByName("FrontView").active = false;
+                target.getChildByName("Background").active = true;
+            });
+            var spawn = cc.spawn([mto,fan1]);
+            pokernode.runAction(spawn);
+
+            var d2 = cc.delayTime(0.15);
+            var fan2 = cc.scaleTo(0.1, 1, 1);
+            var animationFinished = cc.callFunc(function(target) {
+                target.CurrentPosition = target.getPosition();
+                
+                var curPos1 = target.convertToWorldSpaceAR(cc.v2(0,0));
+                var curPos2 = _this.PokerInstanceBackground.node.convertToNodeSpaceAR(curPos1);
+                // cc.log(target);
+                target.setPosition(curPos2);
+                target.PreviousParent = target.parent;
+                target.parent = _this.PokerInstanceBackground.node;
+                // cc.log(target.CurrentPosition);
+                target.PreviousPosition = target.CurrentPosition;
+                target.CurrentPosition = curPos1;
+            });
+            var sequ = cc.sequence([d2,changeFront,fan2,animationFinished]);
+            pokernode.runAction(sequ);
+            return;
+        } else {
+
+            cc.loader.loadRes("music/solitaire_deel", cc.AudioClip, function(err, clip) {
+                cc.audioEngine.play(clip, false, 0.5);
+            });
+            var currentPosition = pokernode.convertToWorldSpaceAR(cc.v2(0,0));
+            // 先反转90变正面数据，再反转-90回来，结束，整个过程移动牌面到指定位置
+            var d1 = cc.delayTime(0.01);
+            // var mto = cc.moveTo(0.3, cc.v2(0 + 69,(-size.height / 2) + 95 + 160));
+            var pos1 = pokernode.convertToWorldSpaceAR(cc.v2(0,0));
+            var pos2 = _this.CurrentPoker.node.convertToWorldSpaceAR(cc.v2(0,0));
+            var mto = cc.moveBy(0.15, cc.v2(pos2.x - pos1.x + 66,pos2.y - pos1.y));
+            var fan1 = cc.scaleTo(0.15, 0.2, 1);
+            var changeFront = cc.callFunc(function(target) {
+                target.getChildByName("FrontView").active = true;
+                target.getChildByName("Background").active = false;
+            });
+            var spawn = cc.spawn([mto,fan1]);
+            pokernode.runAction(spawn);
+
+
+            var d2 = cc.delayTime(0.15);
+            var fan2 = cc.scaleTo(0.1, 1, 1);
+            var animationFinished = cc.callFunc(function(target) {
+                // target.CurrentPosition = target.getPosition();
+                var curPos1 = target.convertToWorldSpaceAR(cc.v2(0,0));
+                var curPos2 = _this.CurrentPoker.node.convertToNodeSpaceAR(curPos1);
+                // cc.log(target);
+                target.setPosition(curPos2);
+                target.PreviousParent = target.parent;
+                target.parent = _this.CurrentPoker.node;
+                // cc.log(target.CurrentPosition);
+                target.PreviousPosition = currentPosition;
+                target.CurrentPosition = curPos1;
+            });
+            var sequ = cc.sequence([d2,changeFront,fan2,animationFinished]);
+            pokernode.runAction(sequ);
+        }
+
         
-        var spawn = cc.spawn([mto,fan1]);
-        pokernode.runAction(spawn);
-        var d2 = cc.delayTime(0.15);
-        var fan2 = cc.scaleTo(0.1, 1, 1);
-        var animationFinished = cc.callFunc(function(target) {
-            target.CurrentPosition = target.getPosition();
-            
-            var curPos1 = target.convertToWorldSpaceAR(cc.v2(0,0));
-            var curPos2 = _this.CurrentPoker.node.convertToNodeSpaceAR(curPos1);
-            // cc.log(target);
-            target.setPosition(curPos2);
-            target.PreviousParent = target.parent;
-            target.parent = _this.CurrentPoker.node;
-            // cc.log(target.CurrentPosition);
-            target.PreviousPosition = target.CurrentPosition;
-            target.CurrentPosition = curPos1;
-        });
-        var sequ = cc.sequence([d2,changeFront,fan2,animationFinished]);
-        pokernode.runAction(sequ);
+        
 
         // var d3 = cc.delayTime(1.3);
         // var destroyPokerNode = cc.callFunc(function(target) {
@@ -287,12 +408,14 @@ cc.Class({
         var mainJS = cc.find('Canvas').getComponent('GameSceneScript');
         var pokerNode = mainJS.CurrentPoker.node;
         var BackgroundView = staBut.currentTarget.getChildByName('Background');
+        cc.log(BackgroundView);
         if (BackgroundView.childrenCount > 0) {
 
 
 
             if (pokerNode.childrenCount > 0) {
                 cc.log("中间节点被占了,需要先执行中间卡牌动画");
+                mainJS.fanzhuan(pokerNode.children[0]);
             } else {
                 
             }
@@ -327,6 +450,7 @@ cc.Class({
             poker.parent = pokerNode;
             poker.CurrentPosition = poker.PreviousPosition;
             poker.PreviousPosition = cc.v2(0,0);
+            poker.interactable = true;
             // 执行牌局回退
 
 

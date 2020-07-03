@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "poker_light",
+    "texture": "c178a840-4d13-4809-824d-5c33aa8e9158",
+    "atlas": "",
+    "rect": [
+      3,
+      2,
+      118,
+      169
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      124,
+      174
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

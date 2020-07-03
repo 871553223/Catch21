@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "super_tip",
+    "texture": "72470683-1fcb-40de-8da4-949e87b68f4a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      216,
+      110
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      216,
+      110
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

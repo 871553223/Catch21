@@ -5,8 +5,8 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 200,
-      "y": 80,
+      "x": 162,
+      "y": 60,
       "width": 1280,
       "height": 720,
       "layout": {

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "nob_count",
+    "texture": "c482122a-646a-4df4-85ac-9768512fd0b6",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      214,
+      92
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      214,
+      92
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

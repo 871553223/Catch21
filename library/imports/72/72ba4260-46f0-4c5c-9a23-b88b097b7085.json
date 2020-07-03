@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Scoresheet",
+    "texture": "91100846-479e-4b7f-8207-06e0612b5d41",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      334,
+      112
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      334,
+      112
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

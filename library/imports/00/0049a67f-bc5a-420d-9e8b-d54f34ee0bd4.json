@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "changkuangmask",
+    "texture": "a7a0beca-4a7d-449a-86bf-8fed43dc270f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      101,
+      475
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      101,
+      475
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

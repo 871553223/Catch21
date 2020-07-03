@@ -505,7 +505,7 @@
     "relativePath": "texture/LoadingImage.png"
   },
   "a7236644-65ab-4029-b2f0-8fc4dd0c8ec2": {
-    "asset": 1592069337681,
+    "asset": 1592504303944,
     "meta": 1590668436235,
     "relativePath": "Script"
   },
@@ -515,7 +515,7 @@
     "relativePath": "Script/LoadViewScript.js"
   },
   "581adc7b-4871-4edc-9180-37ec4f1e9e6c": {
-    "asset": 1590670351271,
+    "asset": 1593623400235,
     "meta": 1590668894388,
     "relativePath": "audios"
   },
@@ -644,13 +644,8 @@
     "meta": 1590689823547,
     "relativePath": "Font/change_score_font.png"
   },
-  "fac648d8-8a27-4c1f-b771-e070cd124c04": {
-    "asset": 1592501263003,
-    "meta": 1592501263007,
-    "relativePath": "Prefabs/ContainerPrefab.prefab"
-  },
   "a08f0da4-6aca-44c8-b0b5-b8798d821315": {
-    "asset": 1592061080527,
+    "asset": 1593624774613,
     "meta": 1592061031736,
     "relativePath": "resources"
   },
@@ -663,21 +658,6 @@
     "asset": 1579082875000,
     "meta": 1592061080568,
     "relativePath": "resources/poker.png"
-  },
-  "c95e80ba-aa3f-4bda-9d34-c7872a5df130": {
-    "asset": 1592500810011,
-    "meta": 1592500810015,
-    "relativePath": "Scene/GameScene.fire"
-  },
-  "2ebe300c-4884-449e-a838-ebf845a14375": {
-    "asset": 1592503477016,
-    "meta": 1592503477019,
-    "relativePath": "Prefabs/PokerPrefab.prefab"
-  },
-  "6fa68a0a-22d5-4342-a3b3-522db0743a58": {
-    "asset": 1592500879841,
-    "meta": 1592500885024,
-    "relativePath": "Script/ToolsScript.js"
   },
   "4ca1dd8c-d8a5-4500-a684-fe2a7915db44": {
     "asset": 1592501150597,
@@ -719,19 +699,459 @@
     "meta": 1592501222228,
     "relativePath": "Font/and_score_font.png"
   },
+  "7fb2f18f-202b-41e1-85d6-8bcbf4cc1361": {
+    "asset": 1592682306538,
+    "meta": 1592682172991,
+    "relativePath": "resources/music"
+  },
+  "ae67c06f-e997-4469-bfb9-c3944b99ae22": {
+    "asset": 1592682306528,
+    "meta": 1592682306542,
+    "relativePath": "resources/music/btn_click.mp3"
+  },
+  "19aeb71e-3add-4613-ae45-3a24c6cbd1c1": {
+    "asset": 1592682306528,
+    "meta": 1592682306543,
+    "relativePath": "resources/music/get_target.mp3"
+  },
+  "857bf840-d861-4510-a4e1-7d4e48bade51": {
+    "asset": 1592682306528,
+    "meta": 1592682306545,
+    "relativePath": "resources/music/bust_eff.mp3"
+  },
+  "1e8ba183-6782-49d4-9c9f-2485aab0f5cb": {
+    "asset": 1592682306528,
+    "meta": 1592682306547,
+    "relativePath": "resources/music/result_eff1.mp3"
+  },
+  "77e4926d-3eac-49fe-9591-47a9d808ec90": {
+    "asset": 1592682306528,
+    "meta": 1592682306549,
+    "relativePath": "resources/music/solitaire_deel.mp3"
+  },
+  "04ea50fe-42f4-45cd-9636-dc701ab91d8b": {
+    "asset": 1592682306528,
+    "meta": 1592682306550,
+    "relativePath": "resources/music/continue_eff.mp3"
+  },
+  "e53eecfa-0f1f-44ae-a8e0-b881c4fdf409": {
+    "asset": 1592682306528,
+    "meta": 1592682306552,
+    "relativePath": "resources/music/stay_eff.mp3"
+  },
+  "0f700a8f-9cba-4455-a075-374080540348": {
+    "asset": 1592682306528,
+    "meta": 1592682306553,
+    "relativePath": "resources/music/result_eff2.mp3"
+  },
+  "f04e3829-3605-401d-a000-e3c8d08c334d": {
+    "asset": 1592682306528,
+    "meta": 1592682306555,
+    "relativePath": "resources/music/time_tip.mp3"
+  },
+  "a3cce68c-d2a4-443a-b9eb-a12aac1f0af1": {
+    "asset": 1592682306528,
+    "meta": 1592682306556,
+    "relativePath": "resources/music/move_to_eff.mp3"
+  },
+  "ff8c4c8e-8966-47f3-8408-0e4aad708684": {
+    "asset": 1592682306528,
+    "meta": 1592682306558,
+    "relativePath": "resources/music/turn_eff1.mp3"
+  },
+  "ae992c77-0c37-4d2b-906e-5ab5735ed069": {
+    "asset": 1592682306528,
+    "meta": 1592682306559,
+    "relativePath": "resources/music/hidedo_click.mp3"
+  },
+  "f152d340-1423-40df-a0f1-9a4030db5be7": {
+    "asset": 1592682306529,
+    "meta": 1592682306560,
+    "relativePath": "resources/music/turn_eff2.mp3"
+  },
+  "37774434-9acf-4b0f-a5e4-788113b67545": {
+    "asset": 1592682306529,
+    "meta": 1592682306561,
+    "relativePath": "resources/music/init_pai.mp3"
+  },
+  "2ebe300c-4884-449e-a838-ebf845a14375": {
+    "asset": 1592770354161,
+    "meta": 1592770354170,
+    "relativePath": "Prefabs/PokerPrefab.prefab"
+  },
+  "b7cbe660-eb15-4beb-ae20-203e19e14b23": {
+    "asset": 1592936481057,
+    "meta": 1592936481101,
+    "relativePath": "resources/error_tip.png"
+  },
+  "4e1de67d-94d5-4fe4-ad75-ba23239d277f": {
+    "asset": 1593545037088,
+    "meta": 1593545037072,
+    "relativePath": "resources/base_ui"
+  },
+  "251d3b8e-9baa-45ab-bd4b-5b2973bedbf4": {
+    "asset": 1593545037064,
+    "meta": 1593545037109,
+    "relativePath": "resources/base_ui/21point_tip.png"
+  },
+  "d7e6f4e2-37c6-4c1c-bb03-235b3057e5c3": {
+    "asset": 1593545037065,
+    "meta": 1593545037119,
+    "relativePath": "resources/base_ui/5cards_tip.png"
+  },
+  "c4e0b532-be00-4ecc-aba9-9719906fde32": {
+    "asset": 1593545037065,
+    "meta": 1593545037130,
+    "relativePath": "resources/base_ui/all_clear.png"
+  },
+  "ce5060d1-6f47-4a03-b47c-58213492d606": {
+    "asset": 1593545037065,
+    "meta": 1593545037131,
+    "relativePath": "resources/base_ui/AutoAtlas.pac"
+  },
+  "92f365e0-b444-4403-a757-72347ece1b40": {
+    "asset": 1593545037066,
+    "meta": 1593545037133,
+    "relativePath": "resources/base_ui/21_scoresheet.jpg"
+  },
+  "3979f592-7d37-4fee-8c6e-98ee6edc2715": {
+    "asset": 1593545037065,
+    "meta": 1593545037144,
+    "relativePath": "resources/base_ui/bottom_bg.png"
+  },
+  "4d28648e-9c77-4262-9467-f012b208445f": {
+    "asset": 1593545037065,
+    "meta": 1593545037153,
+    "relativePath": "resources/base_ui/back_paused_game.png"
+  },
+  "cb364bd3-9eaa-49df-a379-70e4f1e291c5": {
+    "asset": 1593545037066,
+    "meta": 1593545037157,
+    "relativePath": "resources/base_ui/busted_sp.png"
+  },
+  "c99ee081-63ee-4a00-b97f-764b598efbe0": {
+    "asset": 1593545037065,
+    "meta": 1593545037167,
+    "relativePath": "resources/base_ui/changkuang.png"
+  },
+  "f5c9eec0-7152-45c2-b125-0940196680a2": {
+    "asset": 1593545037066,
+    "meta": 1593545037178,
+    "relativePath": "resources/base_ui/currpai_kuang.png"
+  },
+  "a7a0beca-4a7d-449a-86bf-8fed43dc270f": {
+    "asset": 1593545037065,
+    "meta": 1593545037181,
+    "relativePath": "resources/base_ui/changkuangmask.png"
+  },
+  "2453de9d-7488-4ba2-a0d0-ebde3a73e584": {
+    "asset": 1593545037065,
+    "meta": 1593545037200,
+    "relativePath": "resources/base_ui/end_guide_btn.png"
+  },
+  "562e824b-678a-4f04-bb95-399788d9d303": {
+    "asset": 1593545037065,
+    "meta": 1593545037202,
+    "relativePath": "resources/base_ui/error_tip.png"
+  },
+  "b34138f9-ae71-44ee-9cbb-4ef0efdbb655": {
+    "asset": 1593545037065,
+    "meta": 1593545037215,
+    "relativePath": "resources/base_ui/game_complete.png"
+  },
+  "c117bf59-6bca-4518-be5d-2a0f278449d9": {
+    "asset": 1593545037066,
+    "meta": 1593545037237,
+    "relativePath": "resources/base_ui/game_bg.png"
+  },
+  "2f0d8bc4-11ac-43e0-887a-cada826a7a1f": {
+    "asset": 1593545037065,
+    "meta": 1593545037245,
+    "relativePath": "resources/base_ui/game_over_bg.png"
+  },
+  "2ad9877e-ffd6-41f7-ad9d-beed6890e172": {
+    "asset": 1593545037065,
+    "meta": 1593545037258,
+    "relativePath": "resources/base_ui/great_tip.png"
+  },
+  "edef76df-a51f-4a53-85ad-f99ebc73d3aa": {
+    "asset": 1593545037065,
+    "meta": 1593545037272,
+    "relativePath": "resources/base_ui/game_over_text.png"
+  },
+  "9bf06e05-df31-4403-8931-2b47a5ad765b": {
+    "asset": 1593545037065,
+    "meta": 1593545037281,
+    "relativePath": "resources/base_ui/help_btn.png"
+  },
+  "fc98bee6-11bb-481e-9917-796d7d3eec8a": {
+    "asset": 1593545037065,
+    "meta": 1593545037293,
+    "relativePath": "resources/base_ui/initPai_kuang.png"
+  },
+  "621a79e8-190b-4012-b806-2f2a3dd21bc2": {
+    "asset": 1593545037065,
+    "meta": 1593545037294,
+    "relativePath": "resources/base_ui/guide_bg.jpg"
+  },
+  "4f90b9ba-c01f-4c73-81fd-91500e06dcac": {
+    "asset": 1593545037065,
+    "meta": 1593545037303,
+    "relativePath": "resources/base_ui/keep_play_btn.png"
+  },
+  "d38c5264-22a0-48f1-81de-c271eefa610f": {
+    "asset": 1593545037065,
+    "meta": 1593545037308,
+    "relativePath": "resources/base_ui/long_kuang.png"
+  },
+  "fbbd8c60-4a7d-4381-9380-dac88ca6c0f1": {
+    "asset": 1593545037065,
+    "meta": 1593545037314,
+    "relativePath": "resources/base_ui/mega_tip.png"
+  },
+  "c482122a-646a-4df4-85ac-9768512fd0b6": {
+    "asset": 1593545037065,
+    "meta": 1593545037316,
+    "relativePath": "resources/base_ui/nob_count.png"
+  },
+  "8f5ab318-7877-4b59-a83b-0a50d922ed28": {
+    "asset": 1593545037065,
+    "meta": 1593545037323,
+    "relativePath": "resources/base_ui/nobust_tip.png"
+  },
+  "234ffca4-64a4-4a42-9648-b53bbdc7d5fe": {
+    "asset": 1593545037066,
+    "meta": 1593545037326,
+    "relativePath": "resources/base_ui/out_of_move.png"
+  },
+  "23e24481-76bf-4eb7-a92b-ce031acd2dac": {
+    "asset": 1593545037065,
+    "meta": 1593545037333,
+    "relativePath": "resources/base_ui/pai_group_guide.png"
+  },
+  "017da200-f595-47fd-a5a1-53ab54f4f16d": {
+    "asset": 1593545037065,
+    "meta": 1593545037344,
+    "relativePath": "resources/base_ui/pause_btn.png"
+  },
+  "350a4e80-f7e2-4a25-a7b5-c18949f0a5a6": {
+    "asset": 1593545037066,
+    "meta": 1593545037345,
+    "relativePath": "resources/base_ui/out_of_moves_text.png"
+  },
+  "c178a840-4d13-4809-824d-5c33aa8e9158": {
+    "asset": 1593545037065,
+    "meta": 1593545037353,
+    "relativePath": "resources/base_ui/poker_light.jpg"
+  },
+  "4e579b32-6a29-4007-abf6-4e7c910597a1": {
+    "asset": 1593545037065,
+    "meta": 1593545037365,
+    "relativePath": "resources/base_ui/red_point.png"
+  },
+  "a29d1706-62fc-4b80-aee2-e10fa7c975a0": {
+    "asset": 1593545037065,
+    "meta": 1593545037366,
+    "relativePath": "resources/base_ui/pause_finsh_game.png"
+  },
+  "5abf9312-a48d-440e-b971-24116a4e39e5": {
+    "asset": 1593545037066,
+    "meta": 1593545037375,
+    "relativePath": "resources/base_ui/return_btn.png"
+  },
+  "8eb23ae9-0c91-4c57-90a0-dc0d6ea7fbb6": {
+    "asset": 1593545037066,
+    "meta": 1593545037387,
+    "relativePath": "resources/base_ui/return_hide_btn.png"
+  },
+  "843a63d5-1e8c-4542-936e-629957c3ac03": {
+    "asset": 1593545037066,
+    "meta": 1593545037389,
+    "relativePath": "resources/base_ui/replay_guide_btn.png"
+  },
+  "8164a64a-2078-4dd2-bb0b-1059bceb0aaa": {
+    "asset": 1593545037066,
+    "meta": 1593545037396,
+    "relativePath": "resources/base_ui/score_bg.png"
+  },
+  "a2e6d466-42db-419e-b477-d4d7be85a7a5": {
+    "asset": 1593545037066,
+    "meta": 1593545037406,
+    "relativePath": "resources/base_ui/small_wild.png"
+  },
+  "91100846-479e-4b7f-8207-06e0612b5d41": {
+    "asset": 1593545037065,
+    "meta": 1593545037415,
+    "relativePath": "resources/base_ui/Scoresheet.png"
+  },
+  "dd8df536-fb84-47aa-a52c-6860b7cf9751": {
+    "asset": 1593545037066,
+    "meta": 1593545037418,
+    "relativePath": "resources/base_ui/sound_btn.png"
+  },
+  "0f6d99ae-b2b3-4d4c-a364-68ddf5dba99f": {
+    "asset": 1593545037066,
+    "meta": 1593545037430,
+    "relativePath": "resources/base_ui/submit_btn.png"
+  },
+  "3be315c3-00cd-4cad-a437-883389eac8bb": {
+    "asset": 1593545037066,
+    "meta": 1593545037447,
+    "relativePath": "resources/base_ui/submit_score_btn1.png"
+  },
+  "36efbba1-7e69-4fd8-9291-5d5d60b581ed": {
+    "asset": 1593545037066,
+    "meta": 1593545037450,
+    "relativePath": "resources/base_ui/staypai_kuang.png"
+  },
+  "0f869f71-dd36-4824-936b-6f776d205fea": {
+    "asset": 1593545037066,
+    "meta": 1593545037465,
+    "relativePath": "resources/base_ui/submit_score_btn2.png"
+  },
+  "72470683-1fcb-40de-8da4-949e87b68f4a": {
+    "asset": 1593545037066,
+    "meta": 1593545037467,
+    "relativePath": "resources/base_ui/super_tip.png"
+  },
+  "14041ab2-780c-4d57-aca2-4ed9158ff527": {
+    "asset": 1593545037066,
+    "meta": 1593545037478,
+    "relativePath": "resources/base_ui/time_bg.png"
+  },
+  "132d139c-8e4a-4739-84e9-238fd6f5c158": {
+    "asset": 1593545037066,
+    "meta": 1593545037490,
+    "relativePath": "resources/base_ui/time_up_text.png"
+  },
+  "8d36f35c-0809-47da-b689-53dd561266d6": {
+    "asset": 1593545037066,
+    "meta": 1593545037500,
+    "relativePath": "resources/base_ui/time_up.png"
+  },
+  "4a8eb6d9-7c57-41c7-bac0-3ea5c8190c7c": {
+    "asset": 1593545037066,
+    "meta": 1593545037511,
+    "relativePath": "resources/base_ui/wild.png"
+  },
+  "ddaf2879-4655-47ac-bc14-7d4fa84e9478": {
+    "asset": 1593545037066,
+    "meta": 1593545037515,
+    "relativePath": "resources/base_ui/tutorial.png"
+  },
+  "58254fbc-fc43-4d19-9abe-05551c585a96": {
+    "asset": 1593545037066,
+    "meta": 1593545037517,
+    "relativePath": "resources/base_ui/write_line.png"
+  },
+  "668b6d0c-149a-4cf2-ac59-acc435e3ad8f": {
+    "asset": 1593545037066,
+    "meta": 1593545037524,
+    "relativePath": "resources/base_ui/xiaokuang.png"
+  },
+  "445f1249-6799-4da7-905a-f201c586351c": {
+    "asset": 1593624774617,
+    "meta": 1593624774613,
+    "relativePath": "resources/font"
+  },
+  "546bc073-22f9-4c54-885a-22b559a3f182": {
+    "asset": 1593624774610,
+    "meta": 1593624774681,
+    "relativePath": "resources/font/and_score_font.fnt"
+  },
+  "2050059a-f686-4f7f-b859-b289b4439d15": {
+    "asset": 1593624774610,
+    "meta": 1593624774681,
+    "relativePath": "resources/font/change_score_font.fnt"
+  },
+  "48e9e048-e00b-47f8-b6d4-fe7ac28d6585": {
+    "asset": 1593624774610,
+    "meta": 1593624774651,
+    "relativePath": "resources/font/change_score_font.png"
+  },
+  "3472edad-5cb1-42a2-a44e-bf70d13878a3": {
+    "asset": 1593624774611,
+    "meta": 1593624774653,
+    "relativePath": "resources/font/HelveticaNeue-CondensedBlack.ttf"
+  },
+  "9285ae6a-9ff4-443b-bf5e-f72d050b69cc": {
+    "asset": 1593624774610,
+    "meta": 1593624774654,
+    "relativePath": "resources/font/HelveticaNeue-CondensedBold.ttf"
+  },
+  "b487ba5a-c403-4836-96dc-ac2a94e71efd": {
+    "asset": 1593624774610,
+    "meta": 1593624774682,
+    "relativePath": "resources/font/red_time_font.fnt"
+  },
+  "1087ffaf-beb9-4b33-9cc8-c74f81590e35": {
+    "asset": 1593624774609,
+    "meta": 1593624774656,
+    "relativePath": "resources/font/and_score_font.png"
+  },
+  "793b352e-e02e-4d9c-8719-2105577664dc": {
+    "asset": 1593624774610,
+    "meta": 1593624774683,
+    "relativePath": "resources/font/score_font.fnt"
+  },
+  "f3fa93bc-2d43-45bf-92d2-4a42d1af3421": {
+    "asset": 1593624774610,
+    "meta": 1593624774668,
+    "relativePath": "resources/font/red_time_font.png"
+  },
+  "7a414f6f-b50b-466d-aa7d-ce1c61dba0fb": {
+    "asset": 1593624774610,
+    "meta": 1593624774684,
+    "relativePath": "resources/font/temp_score_font.fnt"
+  },
+  "c695025a-590d-4f8e-8208-ebe34f195bc8": {
+    "asset": 1593624774610,
+    "meta": 1593624774669,
+    "relativePath": "resources/font/score_font.png"
+  },
+  "2c321b2b-6267-47e1-8829-aa6466be693f": {
+    "asset": 1593624774610,
+    "meta": 1593624774679,
+    "relativePath": "resources/font/temp_score_font.png"
+  },
+  "fac648d8-8a27-4c1f-b771-e070cd124c04": {
+    "asset": 1593807730252,
+    "meta": 1593807730258,
+    "relativePath": "Prefabs/ContainerPrefab.prefab"
+  },
+  "c95e80ba-aa3f-4bda-9d34-c7872a5df130": {
+    "asset": 1593809503224,
+    "meta": 1593809503230,
+    "relativePath": "Scene/GameScene.fire"
+  },
+  "6fa68a0a-22d5-4342-a3b3-522db0743a58": {
+    "asset": 1593806511145,
+    "meta": 1593806767844,
+    "relativePath": "Script/ToolsScript.js"
+  },
+  "b44b734c-8ef8-4ca2-8175-2292d848474b": {
+    "asset": 1593809159776,
+    "meta": 1593809179233,
+    "relativePath": "Script/PokerPrefabScript.js"
+  },
   "82bdda4d-0f0f-4d31-9492-a839c33f759d": {
-    "asset": 1592503545017,
-    "meta": 1592503883708,
+    "asset": 1593809424509,
+    "meta": 1593809435326,
     "relativePath": "Script/GameSceneScript.js"
   },
   "9b74f6e6-c9c5-4bcf-bdf5-229bce86c32b": {
-    "asset": 1592503469258,
-    "meta": 1592503475436,
+    "asset": 1593809500437,
+    "meta": 1593809502045,
     "relativePath": "Script/ContainerPrefabScript.js"
   },
-  "b44b734c-8ef8-4ca2-8175-2292d848474b": {
-    "asset": 1592503474234,
-    "meta": 1592503475478,
-    "relativePath": "Script/PokerPrefabScript.js"
+  "ae808dac-d135-439c-a84c-3204444e68ee": {
+    "asset": 1593810149763,
+    "meta": 1593810149767,
+    "relativePath": "Prefabs/AlertView.prefab"
+  },
+  "d430410b-82c8-43a3-bcb8-9f82320bcaf2": {
+    "asset": 1593810148176,
+    "meta": 1593810149412,
+    "relativePath": "Script/TabbarScript.js"
   }
 }

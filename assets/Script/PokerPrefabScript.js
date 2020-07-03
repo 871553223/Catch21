@@ -65,8 +65,6 @@ cc.Class({
             type:cc.integer,
             default:0,
         }
-        
-
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -129,6 +127,7 @@ cc.Class({
 
     InitPoker:function (dianshu) {
         var _this = this;
+        var mainSceneScript = cc.find('Canvas').getComponent('GameSceneScript');;
         var num = dianshu % 13;
         if (num === 0) {
             num = 13;
@@ -138,62 +137,75 @@ cc.Class({
         } else {
             _this.node.PokerRealNumber = num;
         }
-        var decors = parseInt(dianshu / 13);
+        var decors = parseInt((dianshu - 1) / 13);
         var decorsString = '';
         switch (decors) {
             case 0:
-                cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
-                    if(err) {
-                        cc.log(err);
-                        return;
-                    }
-                    _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_0_'+num);
-                    _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_2');
-                    _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_2');
-                });
+                // cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
+                //     if(err) {
+                //         cc.log(err);
+                //         return;
+                //     }
+                //     _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_0_'+num);
+                //     _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_2');
+                //     _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_2');
+                // });
+                _this.NumView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_0_'+num);
+                _this.DecorsSmallView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_small_2');
+                _this.DecorsBigView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_big_2');
                 decorsString = "红桃"
                 break;
             case 1:
-                cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
-                    if(err) {
-                        cc.log(err);
-                        return;
-                    }
-                    _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_0_'+num);
-                    _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_0');
-                    _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_0');
-                });
+                // cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
+                //     if(err) {
+                //         cc.log(err);
+                //         return;
+                //     }
+                //     _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_0_'+num);
+                //     _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_0');
+                //     _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_0');
+                // });
+                _this.NumView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_0_'+num);
+                _this.DecorsSmallView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_small_0');
+                _this.DecorsBigView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_big_0');
                 decorsString = "方片"
                 break;
             case 2:
-                cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
-                    if(err) {
-                        cc.log(err);
-                        return;
-                    }
-                    _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_1_'+num);
-                    _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_3');
-                    _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_3');
-                });
+                // cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
+                //     if(err) {
+                //         cc.log(err);
+                //         return;
+                //     }
+                //     _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_1_'+num);
+                //     _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_3');
+                //     _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_3');
+                // });
+
+                _this.NumView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_1_'+num);
+                _this.DecorsSmallView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_small_3');
+                _this.DecorsBigView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_big_3');
                 decorsString = "黑桃"
                 break;
             case 3:
-                cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
-                    if(err) {
-                        cc.log(err);
-                        return;
-                    }
-                    _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_1_'+num);
-                    _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_1');
-                    _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_1');
-                });
+                // cc.loader.loadRes('poker',cc.SpriteAtlas,function(err,atlas){
+                //     if(err) {
+                //         cc.log(err);
+                //         return;
+                //     }
+                //     _this.NumView.spriteFrame = atlas.getSpriteFrame('solitaire_1_'+num);
+                //     _this.DecorsSmallView.spriteFrame = atlas.getSpriteFrame('solitaire_small_1');
+                //     _this.DecorsBigView.spriteFrame = atlas.getSpriteFrame('solitaire_big_1');
+                // });
+                _this.NumView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_1_'+num);
+                _this.DecorsSmallView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_small_1');
+                _this.DecorsBigView.spriteFrame = mainSceneScript.PokerAtlas.getSpriteFrame('solitaire_big_1');
                 decorsString = "草花"
                 break;
         
             default:
                 break;
         }
-        // cc.log("点数:"+num+"   "+"花色:"+decorsString);
+        cc.log("点数:"+num+"   "+"花色:"+decorsString+"    实际点数"+_this.node.PokerRealNumber);
         
     }
 
