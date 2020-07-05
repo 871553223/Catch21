@@ -73,6 +73,7 @@ cc.Class({
       _this.CurrentScore = sum;
 
       if (sum === 21) {
+        mainJS.ComboCount += 1;
         _this.ScoreLabel.string = "0"; // var bingo 
 
         cc.loader.loadRes("music/get_target", cc.AudioClip, function (err, clip) {
@@ -95,20 +96,8 @@ cc.Class({
         });
         getscore.fontSize = 35;
         getscore.color = new cc.color(255, 0, 0, 255);
-        getscore.string = "+200"; // wrongPoker.Size = cc.Size(20,20);
-        // wrongPoker.spriteFrame = ca.spriteFrame;
-        // wrongPoker.type = cc.Sprite.Type.SIMPLE;
-
-        wrongPoker.sizeMode = cc.Sprite.SizeMode.SIMPLE; // if (_this.TargetTips != null || _this.TargetTips != undefined) {
-        //     wrongPoker.spriteFrame = _this.TargetTips;
-        // } else {
-        //     cc.loader.loadRes('base_ui/21point_tip',cc.SpriteFrame,function(err,pointFrame){ 　
-        //         pointFrame.setRect(cc.Rect(0,0,187,108));
-        //         wrongPoker.spriteFrame = pointFrame;
-        //         _this.TargetTips = pointFrame;
-        //     });
-        // }
-
+        getscore.string = "+200";
+        wrongPoker.sizeMode = cc.Sprite.SizeMode.SIMPLE;
         wrongPoker.spriteFrame = mainJS.PokerTargetTips;
         cc.log("nodeSize" + anmationNode.getContentSize().width + anmationNode.getContentSize().height);
         var d1 = cc.delayTime(0.01);
@@ -160,9 +149,15 @@ cc.Class({
           first.active = true;
         } else if (second.active === false) {
           second.active = true;
-        } else if (third.active === false) {} //结束
-        // cc.log(ca);
+        } else if (third.active === false) {
+          //结束
+          third.active = true;
+          var tabbarJS = cc.find('Canvas').getComponent('TabbarScript');
+          tabbarJS.OutMoveAction();
+        } // cc.log(ca);
 
+
+        _this.BustAnimation();
 
         var anmationNode = new cc.Node();
         anmationNode.width = 40;
@@ -205,9 +200,18 @@ cc.Class({
 
 
       cc.log(mainJS.PokerInstanceBackground.node.children);
-      var frontPoker = mainJS.PokerInstanceBackground.node.children[mainJS.PokerInstanceBackground.node.childrenCount - 1];
-      cc.log(frontPoker);
-      mainJS.fanzhuan(frontPoker);
+
+      if (mainJS.PokerInstanceBackground.node.childrenCount > 1) {
+        var frontPoker = mainJS.PokerInstanceBackground.node.children[mainJS.PokerInstanceBackground.node.childrenCount - 1];
+        cc.log(frontPoker);
+        mainJS.fanzhuan(frontPoker);
+      } else {
+        var stashedPoker = cc.find('Canvas/StashButton/Background');
+
+        if (stashedPoker.childrenCount === 0) {
+          mainJS.TimeOut();
+        }
+      }
     } // if (mainJS.CurrentPoker.node) {
     // }
     // var curPos1 = target.convertToWorldSpaceAR(cc.v2(0,0));
@@ -328,9 +332,29 @@ cc.Class({
           if (i == changeTimes - 1) {
             scoreLabel.getComponent(cc.Label).string = curNum;
           }
-        }, 100 * (i + 1));
+        }, 50 * (i + 1));
       })(i);
     }
+  },
+  BustAnimation: function BustAnimation() {
+    var _this = this;
+
+    cc.log(_this.node);
+
+    var uptip = _this.node.getChildByName("Bust");
+
+    var pos = uptip.position;
+    uptip.setPosition(0, pos.y - 150);
+    _this.node.getChildByName("Bust").active = true;
+    cc.log("获取Bust的位置" + uptip.position);
+    var mov = cc.moveBy(0.3, cc.v2(0, 150));
+    var fade = cc.fadeIn(0.3);
+    var spawn = cc.spawn([mov, fade]);
+    uptip.runAction(spawn);
+
+    _this.scheduleOnce(function (target) {
+      uptip.active = false;
+    }, 0.5);
   } // updatenNumberAnim: function (curNum,originNum) {
   //     var difference = curNum - originNum;
   //     var absDifference = Math.abs(difference);

@@ -61,6 +61,18 @@ cc.Class({
       type: cc.Prefab,
       "default": null
     },
+    PauseAlertView: {
+      type: cc.Prefab,
+      "default": null
+    },
+    GameOverAlertView: {
+      type: cc.Prefab,
+      "default": null
+    },
+    OutMoveAlertView: {
+      type: cc.Prefab,
+      "default": null
+    },
     PokerInstanceBackground: {
       type: cc.Sprite,
       "default": null
@@ -148,6 +160,7 @@ cc.Class({
       var pre = cc.instantiate(this.PokerContainer);
       pre._name = "PokerContainer" + (i + 1);
       pre.getChildByName("UpTip").active = false;
+      pre.getChildByName("Bust").active = false;
       this.node.addChild(pre);
       pre.setAnchorPoint(0.5, 0.5);
       pre.setPosition(-halfWidth + 78 + 60 + 157 * i, 0);
@@ -180,8 +193,6 @@ cc.Class({
     bg.getChildByName("FirstRound").active = false;
     bg.getChildByName("SecondRound").active = false;
     bg.getChildByName("ThirdRound").active = false;
-    var alertNode = cc.find('Canvas/AlertView');
-    alertNode.active = false;
     this.fapai(0);
 
     var _this = this;
@@ -213,20 +224,22 @@ cc.Class({
       var labelNode = this.TimeCountLabel.node.getChildByName("Background").getChildByName("Label");
       var label = labelNode.getComponent(cc.Label);
 
-      if (_this.leftSeconds == 30) {
+      if (_this.leftSeconds === 30) {
         cc.loader.loadRes("music/time_tip", cc.AudioClip, function (err, clip) {
           cc.audioEngine.play(clip, false, 0.5);
         });
         cc.loader.loadRes("font/red_time_font", cc.Font, function (err, font) {
           label.font = font;
         });
+      } else if (_this.leftSeconds === 0) {
+        _this.TimeOut();
       }
 
       var timeString = Tools.FormatMMSS(_this.leftSeconds);
       cc.log(timeString);
       label.string = timeString;
       label.color = new cc.Color(255, 0, 0, 255); // cc.log(_this.TimerPause)
-    }, _this, 1, 100, 1, false);
+    }, _this, 1, cc.macro.REPEAT_FOREVER, 1, false);
   },
   // 发牌函数
   fapai: function fapai(seq) {
@@ -264,6 +277,10 @@ cc.Class({
       target.CurrentPosition = curPos1;
 
       _this.fapai(base_count);
+
+      var initCountNode = cc.find('Canvas/PokerInstanceBackground/CountLabel');
+      var initLabel = initCountNode.getComponent(cc.Label);
+      initLabel.string = (parseInt(initLabel.string) + 1).toString();
     }.bind(currentPoker));
     var mto = cc.moveTo(0.05, cc.v2(-size.width / 2 + 20 + 72 + 2.2 * seq, -size.height / 2 + 95 + 160));
     var d1 = cc.delayTime(0.01);
@@ -278,6 +295,9 @@ cc.Class({
 
 
     if (pokernode.parent === _this.CurrentPoker.node) {
+      var initCountNode = cc.find('Canvas/PokerInstanceBackground/CountLabel');
+      var initLabel = initCountNode.getComponent(cc.Label);
+      initLabel.string = (parseInt(initLabel.string) + 1).toString();
       var d1 = cc.delayTime(0.01);
       var pos1 = pokernode.CurrentPosition;
       var pos2 = pokernode.PreviousPosition;
@@ -309,6 +329,9 @@ cc.Class({
       pokernode.runAction(sequ);
       return;
     } else {
+      var initCountNode = cc.find('Canvas/PokerInstanceBackground/CountLabel');
+      var initLabel = initCountNode.getComponent(cc.Label);
+      initLabel.string = (parseInt(initLabel.string) - 1).toString();
       cc.loader.loadRes("music/solitaire_deel", cc.AudioClip, function (err, clip) {
         cc.audioEngine.play(clip, false, 0.5);
       });
@@ -440,14 +463,45 @@ cc.Class({
 
         var mainJS = cc.find('Canvas').getComponent('GameSceneScript');
         cc.log(mainJS.PokerInstanceBackground.node.children);
-        var frontPoker = mainJS.PokerInstanceBackground.node.children[mainJS.PokerInstanceBackground.node.childrenCount - 1];
-        cc.log(frontPoker);
-        mainJS.fanzhuan(frontPoker);
+
+        if (mainJS.PokerInstanceBackground.node.childrenCount > 1) {
+          var frontPoker = mainJS.PokerInstanceBackground.node.children[mainJS.PokerInstanceBackground.node.childrenCount - 1];
+          cc.log(frontPoker);
+          mainJS.fanzhuan(frontPoker);
+        }
       }
     }
   },
   stashAnimation: function stashAnimation(staBut) {
     if (condition) {}
+  },
+  TimeOut: function TimeOut() {
+    var alertNode = cc.find('Canvas/GameOverAlertView');
+
+    if (alertNode != null && alertNode.active === true) {
+      return;
+    }
+
+    cc.loader.loadRes("music/result_eff1", cc.AudioClip, function (err, clip) {
+      cc.audioEngine.play(clip, false, 0.5);
+    });
+    var mainCanvas = cc.find('Canvas');
+    var mainJS = cc.find('Canvas').getComponent('GameSceneScript');
+    mainJS.TimerPause = true;
+    cc.audioEngine.pauseMusic();
+
+    if (alertNode != null) {
+      alertNode.active = true;
+    } else {
+      var gameOverAlert = cc.instantiate(mainJS.GameOverAlertView);
+      alertNode = gameOverAlert;
+      gameOverAlert._name = "GameOverAlertView";
+      mainCanvas.addChild(gameOverAlert);
+    }
+
+    var mask = cc.find('Canvas/GameOverAlertView/bg').getComponent(cc.Sprite);
+    alertNode.zIndex = 999;
+    mask.Color = cc.Color(0, 0, 0, 0);
   } // update (dt) {},
 
 });

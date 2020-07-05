@@ -43,6 +43,7 @@ cc.Class({
     cc.loader.loadRes("music/btn_click", cc.AudioClip, function (err, clip) {
       cc.audioEngine.play(clip, false, 0.5);
     });
+    var mainCanvas = cc.find('Canvas');
     var mainJS = cc.find('Canvas').getComponent('GameSceneScript');
     mainJS.TimerPause = !mainJS.TimerPause;
 
@@ -55,18 +56,34 @@ cc.Class({
     }
 
     cc.log("yyy" + mainJS.TimerPause);
-    var alertNode = cc.find('Canvas/AlertView');
-    alertNode.active = true;
-    var mask = cc.find('Canvas/AlertView/bg').getComponent(cc.Sprite);
+    var alertNode = cc.find('Canvas/PauseAlertView');
+
+    if (alertNode != null) {
+      alertNode.active = true;
+    } else {
+      var pauseAlert = cc.instantiate(mainJS.PauseAlertView);
+      alertNode = pauseAlert;
+      pauseAlert._name = "PauseAlertView";
+      mainCanvas.addChild(pauseAlert);
+    }
+
+    var mask = cc.find('Canvas/PauseAlertView/bg').getComponent(cc.Sprite);
     alertNode.zIndex = 999;
     mask.Color = cc.Color(0, 0, 0, 0);
   },
   KeepPlayAction: function KeepPlayAction() {
-    var alertNode = cc.find('Canvas/AlertView');
-    alertNode.active = false;
-    var mask = cc.find('Canvas/AlertView/bg').getComponent(cc.Sprite);
-    alertNode.zIndex = 999;
-    mask.Color = cc.Color(0, 0, 0, 0);
+    cc.loader.loadRes("music/btn_click", cc.AudioClip, function (err, clip) {
+      cc.audioEngine.play(clip, false, 0.5);
+    });
+    var alertNode = cc.find('Canvas/PauseAlertView');
+
+    if (alertNode != null) {
+      alertNode.active = false;
+      var mask = cc.find('Canvas/PauseAlertView/bg').getComponent(cc.Sprite);
+      alertNode.zIndex = 999;
+      mask.Color = cc.Color(0, 0, 0, 0);
+    }
+
     var mainJS = cc.find('Canvas').getComponent('GameSceneScript');
     mainJS.TimerPause = !mainJS.TimerPause;
 
@@ -76,6 +93,30 @@ cc.Class({
     } else {
       cc.audioEngine.resumeMusic();
       cc.audioEngine.resumeAllEffects();
+    }
+  },
+  ReplayAction: function ReplayAction() {
+    cc.loader.loadRes("music/btn_click", cc.AudioClip, function (err, clip) {
+      cc.audioEngine.play(clip, false, 0.5);
+    });
+    cc.director.loadScene("GameScene", null);
+  },
+  OutMoveAction: function OutMoveAction() {
+    var alertNode = cc.find('Canvas/OutMoveAlertView');
+
+    if (alertNode != null && alertNode.active === true) {
+      return;
+    }
+
+    if (alertNode != null) {
+      alertNode.active = true;
+    } else {
+      var mainJS = cc.find('Canvas').getComponent('GameSceneScript');
+      var mainCanvas = cc.find('Canvas');
+      var gameOverAlert = cc.instantiate(mainJS.OutMoveAlertView);
+      alertNode = gameOverAlert;
+      gameOverAlert._name = "OutMoveAlertView";
+      mainCanvas.addChild(gameOverAlert);
     }
   } // update (dt) {},
 

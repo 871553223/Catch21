@@ -1115,13 +1115,13 @@
     "relativePath": "resources/font/temp_score_font.png"
   },
   "fac648d8-8a27-4c1f-b771-e070cd124c04": {
-    "asset": 1593807730252,
-    "meta": 1593807730258,
+    "asset": 1593968711350,
+    "meta": 1593968711355,
     "relativePath": "Prefabs/ContainerPrefab.prefab"
   },
   "c95e80ba-aa3f-4bda-9d34-c7872a5df130": {
-    "asset": 1593809503224,
-    "meta": 1593809503230,
+    "asset": 1593945103870,
+    "meta": 1593945103875,
     "relativePath": "Scene/GameScene.fire"
   },
   "6fa68a0a-22d5-4342-a3b3-522db0743a58": {
@@ -1134,24 +1134,34 @@
     "meta": 1593809179233,
     "relativePath": "Script/PokerPrefabScript.js"
   },
-  "82bdda4d-0f0f-4d31-9492-a839c33f759d": {
-    "asset": 1593809424509,
-    "meta": 1593809435326,
-    "relativePath": "Script/GameSceneScript.js"
-  },
-  "9b74f6e6-c9c5-4bcf-bdf5-229bce86c32b": {
-    "asset": 1593809500437,
-    "meta": 1593809502045,
-    "relativePath": "Script/ContainerPrefabScript.js"
-  },
   "ae808dac-d135-439c-a84c-3204444e68ee": {
     "asset": 1593810149763,
     "meta": 1593810149767,
     "relativePath": "Prefabs/AlertView.prefab"
   },
+  "df136fc9-f076-4a48-a1e2-106fdefb4526": {
+    "asset": 1593943864157,
+    "meta": 1593943864163,
+    "relativePath": "Prefabs/GameOverAlertView.prefab"
+  },
+  "83f3c637-59b1-44b8-b471-a0d663d454eb": {
+    "asset": 1593816666932,
+    "meta": 1593816666937,
+    "relativePath": "Prefabs/OutMoveAlertView.prefab"
+  },
   "d430410b-82c8-43a3-bcb8-9f82320bcaf2": {
-    "asset": 1593810148176,
-    "meta": 1593810149412,
+    "asset": 1593817305872,
+    "meta": 1593817306991,
     "relativePath": "Script/TabbarScript.js"
+  },
+  "82bdda4d-0f0f-4d31-9492-a839c33f759d": {
+    "asset": 1593968042180,
+    "meta": 1593968043873,
+    "relativePath": "Script/GameSceneScript.js"
+  },
+  "9b74f6e6-c9c5-4bcf-bdf5-229bce86c32b": {
+    "asset": 1593968701601,
+    "meta": 1593968703502,
+    "relativePath": "Script/ContainerPrefabScript.js"
   }
 }
